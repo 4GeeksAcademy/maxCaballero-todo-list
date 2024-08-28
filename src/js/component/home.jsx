@@ -21,7 +21,7 @@ const Home = () => {
 
   return (  
     <div className="contenedor-principal">  
-      <h1>Tareas</h1>  
+      <h1>Mis tareas</h1>  
       <ul>  
         <li>  
           <input  
@@ -33,16 +33,16 @@ const Home = () => {
           />  
         </li>  
         {tareas.map((item, index) => (  
-          <li key={index}> {/* Use index as key, but consider a unique id in a real app */}
+          <li key={index}> 
             {item}{" "}  
-            <i  
+            <i              
               className="fa-solid fa-trash"  
               onClick={() => handleDelete(index)}  
             ></i>  
           </li>  
         ))}  
       </ul>  
-      <h2>{tareas.length} tarea{tareas.length !== 1 ? 's' : ''} en total</h2>  
+      <h2>{tareas.length} tarea{tareas.length !== 1 ? 's' : ''}</h2>  
     </div>  
   );  
 };  
